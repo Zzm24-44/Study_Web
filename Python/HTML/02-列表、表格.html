@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <!-- 列表：布局内容排列整齐的区域。包括无序有序和定义列表 -->
+  <!-- 无序列表:ul嵌套ui，ul是无序列表，li是列表条目-->
+  <ul>
+    <li>我是谁？</li>
+    <li>我在哪？</li>
+    <li>我在做什么？</li>
+  </ul>
+  <!-- ul标签里只能包裹任何内容 -->
+
+  <!-- 有序列表：布局排列整齐的需要规定顺序的区域 
+  ol嵌套li，ol是有序列表，li是列表条目-->
+  <ol>
+    <li>你是谁？</li>
+    <li>你在哪？</li>
+    <li>你在干什么？</li>
+  </ol>
+
+  <!-- 定义列表：dl嵌套dt和dd，dl是定义列表，dt是定义列表的标题，dd是定义列表的描述 -->
+  <dl>
+    <dt>服务中心</dt>
+    <dd>申请售后</dd>
+    <dd>售后政策</dd>
+  </dl>
+
+  <!-- 表格：table嵌套tr，tr嵌套th/td，table为表格，tr为行，th和td分别为表头单元格和内容单元格-->
+  <table border="2">
+    <!-- 使用border属性可为表格添加边框线 -->
+    <thead>
+      <tr>
+        <th>姓名</th>
+        <th>语文</th>
+        <th>数学</th>
+        <th>总分</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>张三</td>
+        <td>99</td>
+        <td>100</td>
+        <td>199</td>
+      </tr>
+      <tr>
+        <td>李四</td>
+        <td>60</td>
+        <td>80</td>
+        <td>140</td>
+      </tr>
+    </tbody>
+  </table>
+  <!-- 补充：thead为表格头部，tbody为表格主体，tfoot为表格底部  -->
+  <br>
+  <!-- 合并操作：
+   跨行合并：rowspan  跨列合并：colsapn -->
+  <table border="2">
+    <!-- 使用border属性可为表格添加边框线 -->
+    <tr>
+      <th>姓名</th>
+      <th>语文</th>
+      <th>数学</th>
+      <th>总分</th>
+    </tr>
+    <tr>
+      <td>张三</td>
+      <td>99</td>
+      <td>99</td>
+      <!-- <td rowspan="2">100</td> -->
+      <td>100</td>
+    </tr>
+    <tr>
+      <td>李四</td>
+      <td>60</td>
+      <!-- <td colspan="2">100</td> -->
+      <td>100</td>
+      <td>100</td>
+    </tr>
+  </table>
+</body>
+
+</html>

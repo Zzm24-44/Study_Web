@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 结构伪类选择器：根据元素的结构关系查找元素 -->
+  <!-- E:first-child,E:last-child,E:nth-child(N) 
+   N可以为公式，比如2n，2n+1,n+5-->
+  <style>
+    li:first-child {
+      background-color: bisque;
+    }
+
+    li:nth-child(3) {
+      background-color: green;
+    }
+
+    li:nth-child(2n) {
+      background-color: red;
+    }
+  </style>
+
+  <!--伪元素选择器：创建虚拟元素，用于摆放装饰性的内容E::before:在E元素里面最前面添加一个伪元素
+  E::after：在E元素里面最后面添加一个伪元素-->
+  <style>
+    div {
+      width: 300px;
+      height: 300px;
+      background-color: burlywood;
+    }
+
+    div::before {
+      content: "老鼠";
+
+      width: 100px;
+      height: 100px;
+      background-color: brown;
+      display: block;
+    }
+
+    div::after {
+      content: "大米";
+
+      width: 100px;
+      height: 100px;
+      background-color: brown;
+      display: inline-block;
+    }
+  </style>
+
+  <!-- 盒子模型：布局盒子，摆放盒子和内容 -->
+  <!-- 盒子尺寸=内容尺寸+border尺寸＋内边距尺寸 -->
+  <!-- 重要组成部分：width&height
+    内边距padding
+    边框线border（solid，dashed，dotted）
+    外边距margin -->
+  <style>
+    p {
+      width: 200px;
+      height: 200px;
+      background-color: pink;
+      /* background:url(../images/loginsj.png) no-repeat 21px 18px; */
+
+      /* 文本text： */
+      text-align: center;
+
+      /* 文本行line： */
+      line-height: 50px;
+
+      /* 设置元素定位模式 */
+      position: absolute;
+
+      /* padding-top,right,bottom,left: ; */
+      /* 以下这种是多值写法 ：上左右下*/
+      padding: 10px, 20px, 40px, 80px;
+
+      border: 1px solid #000;
+      /* border-top: 1px solid #000;
+      border-bottom: 1px solid #000;
+      border-right: 1px solid #000; */
+
+      /* 写法与padding的一样 */
+      margin: 50px;
+      /* margin-top: ;
+      margin-bottom: ;
+      margin-right: ;
+      margin-left: ; */
+
+      /* 版心居中要求:盒子要有宽度 */
+      margin: 0 auto;
+
+      /* 元素溢出 */
+      /* overflow: hidden; 溢出隐藏*/
+      /* overflow: scroll; 溢出滚动*/
+      /* overflow: auto; 溢出滚动，只有溢出时才会显示滚动条*/
+      overflow: auto;
+
+      /* 内减模式：不需要手动减法。用box-sizing: border-box就不会撑大盒子 */
+      box-sizing: border-box;
+
+      /* 盒子模型——圆角效果的设置 */
+      border-radius: 20px;
+      /* 可以取多值,依次为左上，右上，右下，左下 */
+      border-radius: 10px 20px 40px 80px;
+      /* 盒子模型——阴影效果的设置 */
+      /* 属性名box-shadow：属性值：x轴偏移量 Y轴偏移量 模糊半径 扩散半径 颜色 内外阴影 */
+
+      /* 外边距问题——塌陷现象：也就是子级盒子嵌套在父级盒子里应如何处理子级盒子边距问题 */
+      /* 父子级问题解决方法：取消子级margin，父级设置padding，并加上box-sizing: border-box; */
+      /* 父级设置overflow：hidde */
+      /*  父级设置border-top */
+
+      /* 行内元素：内外边距问题：因为margin和padding无法改变元素垂直位置，给行内元素添加line-height可以改变垂直位置 */
+      /* span{
+        margin: auto;
+        padding: 20px;
+        line-height: 100px;
+      } */
+    }
+  </style>
+
+  <style>
+    /* 清除默认样式 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      /* 利用內减模式,这样就不会撑大盒子了 */
+    }
+
+    /* 去掉列表的项目符号 */
+    li {
+      list-style: none;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 结构伪类选择器 -->
+  <li>1</li>
+  <li>2</li>
+  <li>3</li>
+  <li>4</li>
+  <li>5</li>
+  <li>6</li>
+  <li>7</li>
+  <li>8</li>
+
+  <!-- 伪元素选择器 -->
+  <div>爱</div>
+
+  <!-- 盒子模型 -->
+  <p>
+    p 标签
+  </p>
+
+  <!--  清除默认样式  -->
+  <h1>标题</h1>
+  <p>pppp</p>
+  <ul>
+    <li>1</li>
+    <li>2</li>
+  </ul>
+
+</body>
+
+</html>

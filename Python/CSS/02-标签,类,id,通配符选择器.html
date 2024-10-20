@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>标签,类,id,通配符选择器</title>
+  <!-- 标签选择器 -->
+  <style>
+    p {
+      color: blue;
+    }
+
+    div {
+      color: antiquewhite;
+    }
+  </style>
+  <!-- 类选择器：通常设置CSS样式 -->
+  <!-- 作用:查找标签,差异化设置标签的显示效果 -->
+  <!-- 类名定义要见名知意 -->
+  <style>
+    .red {
+      color: red;
+    }
+
+    .size {
+      font-size: 50px;
+    }
+
+    /* 文字属性 font，line*/
+    .Text {
+      font-size: 40;
+      /* 字体大小（默认大小16px）*/
+      font-weight: 200;
+      /* 字体粗细 */
+      font-style: italic;
+      /* 字体倾斜 */
+      line-height: 2;
+      /* 行高 80px*/
+      font-family: 楷体;
+      /* 字体 */
+      color: rgb(0, 255, 0);
+      /* 颜色 */
+      text-indent: 10px;
+      text-indent: 10em;
+      /* 文本缩进 */
+      text-align: center;
+      /* 文本对齐方式 */
+      text-decoration: dashed;
+      /* 文本修饰线:none为无,underline为下划线,line-through为删除线，overline为上划线 */
+    }
+
+    /* 形状属性 */
+    .box {
+      color: red;
+      width: 100px;
+      height: 100px;
+      background-color: brown;
+    }
+  </style>
+
+  <!-- id选择器：通常配合JavaScript使用,很少用来设置CSS样式 -->
+  <!-- 作用:查找标签,差异化设置标签的显示效果 -->
+  <style>
+    #red {
+      color: red;
+    }
+  </style>
+
+  <!-- 通配符:所有标签 -->
+  <!-- <style>
+    * {
+      color: red;
+    }
+  </style> -->
+
+</head>
+
+<body>
+  <p>p 类选择器</p>
+  <p class="red">类选择器</p>
+  <div class="red size">类选择器</div>
+
+  <div id="red">id选择器</div>
+
+  <div class="Text">文字属性测试</div>
+
+  <div class="box">画盒子</div>
+
+  <!-- Emmet写法 -->
+
+</body>
+
+</html>

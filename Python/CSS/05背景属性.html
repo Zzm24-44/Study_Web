@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!--  -->
+  <style>
+    div {
+      width: 400px;
+      height: 400px;
+      background-color: aqua;
+
+      background-image: url(../0-技术路线图.png);
+      /* 背景图 */
+      background-repeat: no-repeat;
+      /* 背景图平铺效果: no-repeat不平铺,repeat平铺,repeat-x水平方向平铺,repeat-y垂直方向平铺 */
+      background-position: center;
+      /* 背景图位置left,right,center,top,bottom,0,100px, 50px center,可两两混用*/
+      background-size: contain;
+      background-size: cover;
+      background-size: 100%;
+      /* 背景图缩放：关键字分别为cover（完全覆盖盒子但部分图片显示不全）和contain，百分比，数字＋单位*/
+      background-attachment: fixed;
+      /* 背景图固定 */
+
+      /* background背景复合属性 */
+      background: pink url(../0-技术路线图.png) no-repeat center bottom/cover fixed;
+    }
+  </style>
+</head>
+
+<body>
+  <div>div 标签</div>
+</body>
+
+</html>

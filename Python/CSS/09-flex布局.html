@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- flex布局也叫弹性布局,是浏览器提倡的布局模型,非常适合结构化布局,提供了强大的空间分布和对齐能力 -->
+  <!-- flex模型不会尝试浮动布局中脱标现象,布局网页更简单更灵活 -->
+  <style>
+    /* 弹性容器 */
+    .box {
+      /* 默认情况下,主轴方向为水平方向,尺寸靠内容撑开,侧轴为垂直方向,默认拉伸 */
+      display: flex;
+      /* 主轴对齐方式:justify-content */
+      /* flex-start左对齐,flex-end右对齐 */
+      /* center居中,space-between空白间距均分在弹性盒子之间 */
+      /* space-around空白间距均分在弹性盒子两侧,space-evenl弹性盒子与容器与盒子之间的间距相等 */
+      justify-content: space-between;
+
+      /* align-items:当前弹性容器内所有弹性盒子的侧轴对齐方式(给弹性容器设置) */
+      /*align-self:单独控制某个弹性盒子的侧轴对齐方式*/
+      /* 属性名不一样,但属性值一样 */
+      /* stretch:沿着侧轴轴线拉伸至铺满容器(弹性盒子没有设置侧轴方向尺寸默认拉伸) */
+      /* center:沿着侧轴居中排列 */
+      /* flex-start:从起点开始排列,flex-end从终点开始排列 */
+      align-items: center;
+
+      /* flex-direction:修改主轴方向 */
+      /* column:垂直方向,从上向下 */
+      flex-direction: column;
+
+      /*flex:弹性伸缩比:控制弹性盒子的主轴方向的尺寸,以数值决定比例,决定盒子宽高*/
+
+      /* flex-wrap:弹性盒子换行 */
+      /*因为弹性盒子可以自动挤压或拉伸,默认在一行显示*/
+      flex-wrap: wrap;
+
+      /* 行对齐方式:align-content */
+      /* 对单行弹性盒子不生效 */
+      /* flex-start,flex-end,center,space-between,space-around.space-evenly(平均) */
+      align-content: center;
+
+      height: 300px;
+      border: 1px solid black;
+    }
+
+    /* 给父元素设置display:flex,子元素可以自动挤压和拉伸 */
+    /* 弹性盒子:沿着主轴方向排列 */
+    .box div {
+      /* float: left;
+      margin: 50px; */
+
+      width: 200px;
+      height: 100px;
+      background: pink;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 块级元素 -->
+  <style>
+    div {
+      width: 100px;
+      height: 100px;
+
+      /* 转换显示模式 (仔细观察效果)*/
+      /* display: inline-block; */
+      /* display: inline; */
+      display: block;
+    }
+
+    .div1 {
+      background-color: brown;
+    }
+
+    .div2 {
+      background-color: orange;
+    }
+  </style>
+
+  <!-- 行内元素 -->
+  <style>
+    span {
+      width: 100px;
+      height: 100px;
+      ;
+    }
+  </style>
+
+  <!-- 行内块元素 -->
+  <style>
+    img {
+      width: 100px;
+      height: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 块级元素 -->
+  <!-- 独占一行，宽高属性生效,宽度默认为父级的100%-->
+  <div class="div1">div 1</div>
+  <div class="div2">div 2</div>
+
+  <!-- 行内元素 -->
+  <!-- 一行共存多个,宽高属性不生效,宽高由内容撑开 -->
+  <span>span1</span>
+  <span>span2</span>
+
+  <!-- 行内块元素 -->
+  <!-- 一行共存多个,宽高属性生效,宽高默认由内容撑开 -->
+  <img src="../0-技术路线图.png" alt="">
+
+  <!-- 转换显示模式 属性名:display -->
+  <!-- 属性值:block块级,inline-block行内块,行内工作中基本用不上 -->
+
+</body>
+
+</html>

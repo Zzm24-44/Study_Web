@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 复合选择器:更快速高效地选择目标元素 -->
+  <!-- 后代选择器：选中某元素的后代元素，所有后代，包含儿子、孙子等 -->
+  <style>
+    div span {
+      color: red;
+    }
+  </style>
+
+  <!-- 子代选择器：只选中某元素的子代元素 -->
+  <style>
+    div>span {
+      color: green;
+    }
+  </style>
+
+  <!-- 并集选择器: 选中多组标签设置相同的样式-->
+  <style>
+    div,
+    p,
+    span {
+      color: red;
+    }
+  </style>
+
+  <!-- 交集选择器:选中同时满足多个条件的元素 -->
+  <style>
+    p.box {
+      color: red;
+    }
+  </style>
+
+  <!-- 伪类选择器：选中元素的某个状态设置样式 -->
+  <!-- 鼠标悬停状态：选择器：hover（CSS属性） -->
+  <!-- :link访问前 ：visited访问后 ：active点击时激活 -->
+  <style>
+    a:hover {
+      color: red;
+    }
+
+    .box:hover {
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- 后代选择器 -->
+  <span>这是span标签</span>
+  <div>
+    <span>这是div的儿子</span>
+    <p>
+      <span>孙子 span</span>
+    </p>
+  </div>
+
+  <!-- 子代选择器 -->
+  <div>
+    <span>儿子 span</span>
+    <p>
+      <span>孙子 span</span>
+    </p>
+  </div>
+
+  <!-- 并集选择器: 选中多组标签设置相同的样式-->
+  <div>div标签</div>
+  <p>p 标签</p>
+  <span>span 标签</span>
+
+  <!-- 交集选择器 -->
+  <p class="box">p标签</p>
+  <p>p标签</p>
+  <div class="box">div标签，使用了类选择器</div>
+
+  <!-- 伪类选择器 -->
+  <a href="#">标签，超链接</a>
+  <div class="box">div 标签</div>
+</body>
+
+</html>

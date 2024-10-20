@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <!-- 继承性:子级默认继承父级的文字控制属性 -->
+  <style>
+    body {
+      font-size: 30px;
+      color: red;
+      font-weight: 700;
+    }
+  </style>
+
+  <!-- 层叠性:相同的属性会覆盖,不同的属性会叠加 -->
+  <style>
+    div {
+      color: red;
+      font-size: 30px;
+    }
+
+    div {
+      color: green;
+      font-weight: 700;
+    }
+  </style>
+
+  <!-- 优先级:也叫权重,当一个标签使用了多种选择器时,基于不同种类的选择器的匹配规则 -->
+  <!-- 公式:通配符选择器<标签选择器<类选择器<id选择器<行内样式<!important -->
+  <!-- 即选中标签的范围越大,优先级越低 -->
+  <!-- ！important权重最大，继承权重最低 -->
+  <style>
+
+  </style>
+
+</head>
+
+<body>
+  <!-- 继承性 -->
+  <div>1</div>
+  <p>2</p>
+  <span>3</span>
+  <!-- 如果标签有自己的样式则生效自己的样式,不继承 -->
+  <!-- 不继承的情况 -->
+  <a href="#">a标签</a>
+  <h1>h1标签</h1>
+
+  <!-- 层叠性 -->
+  <div>div标签</div>
+
+  <!-- 优先级 -->
+
+
+</body>
+
+</html>
